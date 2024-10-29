@@ -9,9 +9,6 @@ public class Ordenacao {
         long seed = 12345;
         int[] tamanhos = {1000, 10000, 100000, 500000, 1000000};
         int rodadas = 5;
-        
-        //int array[] = {1, 3, 5, 2, 6, 4};
-        //int n = 6; // Define o tamanho do array manualmente
 
         for(int tamanho:tamanhos){
             
@@ -24,7 +21,7 @@ public class Ordenacao {
                 
                 int[] array = new int[tamanho];
                 for (int i = 0; i < tamanho; i++) {
-                    array[i] = random.nextInt(100000); // Valores de exemplo (0 a 99999)
+                    array[i] = random.nextInt(100000); 
                 }
                 
                 long inicio = System.currentTimeMillis();
@@ -39,7 +36,6 @@ public class Ordenacao {
                 t_total += resultado.getTrocas();
                 i_total += resultado.getIteracao();
                 
-                //System.out.println("Tempo de execucao " + tamanho + " = " + tempoExecucao );
             }
             System.out.println("Media de tempo do tamanho " + tamanho + " = " + media/5);
             System.out.println("Media de iteracoes do tamanho " + tamanho + " = " + i_total/5);
